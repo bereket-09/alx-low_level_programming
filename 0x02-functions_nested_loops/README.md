@@ -1,7 +1,7 @@
 0x02. C - Functions, nested loops
 =================================
 
--   By Julien Barbier
+-   By Bereket Zelalem
 
 Resources
 ---------
