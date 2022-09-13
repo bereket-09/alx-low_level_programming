@@ -1,21 +1,17 @@
 #include <stdio.h>
-
 /**
- * main - Prints natural numbers below 1024 that are
- * multiples of 3 or 5
- *
- * Return: Always 0.
- */
-
+*main - prints count of multiples
+*of 3 or 5 below 1024
+*Return: return 0
+*/
 int main(void)
 {
-	int a, b;
-
-	for (a = 1; a < 1024; a++)
-	{
-		if ((a % 3) == 0 || (a % 5) == 0)
-			b += a;
-	}
-	printf("%d\n", b);
-	return (0);
+int n, sum = 0;
+for (n = 0; n < 1024; n++)
+{
+if ((n % 3) == 0 || (n % 5) == 0)
+sum += n;
+}
+printf("%d\n", sum);
+return (0);
 }

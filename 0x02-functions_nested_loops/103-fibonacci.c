@@ -1,20 +1,23 @@
 #include <stdio.h>
-
 /**
- * main - Prints sum of fibo numbers under 4,000,000
- * Return: 0
- */
+*main - prints sum of even fibonacci
+*suit elements
+*fibonacci suit numbers
+*Return: return 0
+*/
 int main(void)
 {
-	long int f1 = 1, f2 = 2, sum = f2, tmp;
+unsigned long n1 = 0, n2 = 1, n3 = 0, sum = 0;
+while (n3 <= 4000000)
+{
+n3 = n1 + n2;
+n1 = n2;
+n2 = n3;
 
-	while (f2 < 4000000)
-	{
-		tmp = f1 + f2;
-		f1 = f2;
-		f2 = tmp;
-		sum += (f2 % 2 == 0) ? f2 : 0;
-	}
-	printf("%li\n", sum);
-	return (0);
+if ((n1 % 2) == 0)
+sum += n1;
+
+}
+printf("%ld\n", sum);
+return (0);
 }
