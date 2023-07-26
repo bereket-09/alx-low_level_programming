@@ -1,25 +1,25 @@
 #include <stdio.h>
-#include <unistd.h>
+
 /**
- * main - Entry point
- * Description: prints numbers
- * Return: Always 0 (success)
- */
+* main - entry point
+* Return: always 0 (success)
+*/
 int main(void)
 {
-	int i;
+int n;
 
-	for (i = '0'; i <= '9' ; i++)
-	{
-		putchar(i);
+n = 48;
 
-		if (i != '9')
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-
-	putchar('\n');
-	return (0);
+while (n <= 57) /*57 corresponds with ASCII character 9*/
+{
+putchar (n);
+if (n != 57)
+{
+putchar(',');
+putchar(' ');
+}
+n++;
+}
+putchar ('\n'); /*add new line*/
+return (0);
 }

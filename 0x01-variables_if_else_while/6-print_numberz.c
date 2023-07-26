@@ -1,18 +1,20 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
- * main - Entry point
- * Description: prints char below 10
- * Return: Always 0 (success)
+ * main - prints numbers 0-9 without using char or printf/puts,
+ * and putchar 2x max
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-	int a;
+	int i = '0';
 
-	for (a = 0; a < 10; a++)
+	while (i <= '9')
 	{
-		putchar(a + '0');
+		putchar(i);
+		i++;
 	}
 	putchar('\n');
 	return (0);
 }
+

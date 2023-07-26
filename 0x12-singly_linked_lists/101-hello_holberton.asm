@@ -1,21 +1,14 @@
-extern printf
+		global	main
 
-section .text
-global main
+		section	.text
+main:	mov	rax, 1
+		mov	rdi, 1
+		mov	rsi, holberton
+		mov	rdx, 17
+		syscall
+		mov	rax, 60
+		xor	rdi, rdi
+		syscall
 
-main:
-push rbp
-
-mov rdi, fmt
-mov rsi, msg
-mov rax, 0
-call printf
-
-pop rbp
-
-mov rax, 0
-ret
-
-section .data
-msg: db "Hello, Holberton", 0
-fmt: db "%s", 10, 0
+		section	.data
+holberton:db	"Hello, Holberton", 10

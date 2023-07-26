@@ -1,19 +1,11 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
- * main -Entry point
- * Description: prints allsingle digit numbers of
- * base 10 from 0
- * Return: Always 0 (success)
+ * main - Prints the numbers from 0-9.
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-	int a;
-
-	for (a = 0; a < 10; a++)
-	{
-		printf("%d", a);
-	}
-	putchar('\n');
+	printf("0123456789\n");
 	return (0);
 }

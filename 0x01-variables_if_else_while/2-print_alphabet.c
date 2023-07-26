@@ -1,18 +1,18 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
- * main - Entry point
- * Description: prints the alphabet in lowercase\n
- * Return: Always 0 (success)
+ * main - prints the alphabet in lowercase.
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-	int ch;
+	char c = 'a';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	while (c <= 'z')
 	{
-		putchar(ch);
+		putchar(c);
+		c++;
 	}
 	putchar('\n');
-return (0);
+	return (0);
 }

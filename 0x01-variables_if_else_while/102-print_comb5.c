@@ -1,44 +1,37 @@
 #include <stdio.h>
-#include <unistd.h>
+
 /**
- * main - Entry point
- * Description: prints all possible combination of 2-digit numbers
- * Return: Always 0 (success)
- */
+* main - loop through variables a,b,c printing digits
+*
+* Return: print to stdout all possible different combinations of three digits
+**/
 int main(void)
 {
-	int c, i, k, j;
+int a = 0;
+int b;
 
-	for (c = 48; c <= 57; c++)
-	{
-		for (i = 48; i <= 57; i++)
-		{
-			for (k = 48; k <= 57; k++)
-			{
-				for (j = 48; j <= 57; j++)
-				{
-				if (((k + j) > (c + i) &&  k >= c) || c < k)
-				{
-					putchar(c);
-					putchar(i);
-					putchar(' ');
-					putchar(k);
-					putchar(j);
-
-					if (c + i + k + j == 227 && c == 57)
-					{
-					break;
-					}
-					else
-					{
-					putchar(',');
-					putchar(' ');
-					}
-				}
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+while (a <= 98)
+{
+b = a + 1;
+while (b <= 99)
+{
+putchar(a / 10 % 10 + '0');
+putchar(a % 10 + '0');
+putchar(' ');
+putchar(b / 10 % 10 + '0');
+putchar(b % 10 + '0');
+if (a == 98 && b == 99)
+{
+putchar('\n');
+}
+else
+{
+putchar(',');
+putchar(' ');
+}
+b++;
+}
+a++;
+}
+return (0);
 }

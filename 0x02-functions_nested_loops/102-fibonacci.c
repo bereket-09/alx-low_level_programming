@@ -1,26 +1,34 @@
 #include <stdio.h>
+
 /**
-*main - prints out first 50
-*fibonacci suit numbers
-*Return: return 0
-*/
+ * main - main block
+ * Description: Print the first 50 fibonacci numbers, starting with 1 and 2.
+ * Numbers must be coma and space separated.
+ * Return: 0
+ */
 int main(void)
 {
-int inc;
-unsigned long n1 = 0, n2 = 1, n3;
-for (inc = 0; inc < 50; inc++)
-{
-n3 = n1 + n2;
-printf("%lu", n3);
-n1 = n2;
-n2 = n3;
+	int count = 2;
+	long int i = 1, j = 2;
+	long int k;
 
-if (inc == 49)
-printf("\n");
-else
-printf(", ");
+	printf("%lu, ", i);
+	while (count <= 50)
+	{
+		if (count == 50)
+		{
+			printf("%lu\n", j);
+		}
+		else
+		{
+			printf("%lu, ", j);
+		}
 
-}
+		k = j;
+		j += i;
+		i = k;
+		count++;
+	}
 
-return (0);
+	return (0);
 }
